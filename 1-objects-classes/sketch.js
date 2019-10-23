@@ -1,11 +1,13 @@
 //create a variable to hold one ball
 let b;
 let anotherBall;
+let cloudy;
 
 function setup() {
   createCanvas(800, 400);
   b = new Ball(0, 100,"red", 20); //make a new ball from the Ball class and call it b.
   anotherBall = new Ball(200,20,"green", 100);
+  cloudy = new Ball (30,200,"purple",300)
 }
 
 
@@ -15,6 +17,8 @@ function draw(){
     b.moveBall(); //move the ball called b (go look in the Ball class for the moveBall function)
     anotherBall.drawBall();
     anotherBall.moveBall();
+    cloudy.drawBall();
+    cloudy.moveBall();
 
 }
 
