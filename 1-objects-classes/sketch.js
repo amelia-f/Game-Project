@@ -22,7 +22,7 @@ function draw(){
 //ball class from which to create new balls with similar properties.
 class Ball {
 
-	constructor(x,y,color){ //every ball needs an x value and a y value
+	constructor(x,y,color,diameter){ //every ball needs an x value and a y value
 		    this.x = x;
     		this.y = y;
         this.color= color;
