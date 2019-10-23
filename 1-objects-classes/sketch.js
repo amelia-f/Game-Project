@@ -4,8 +4,8 @@ let anotherBall;
 
 function setup() {
   createCanvas(800, 400);
-  b = new Ball(0, 100,"red"); //make a new ball from the Ball class and call it b.
-  anotherBall = new Ball(200,20,"green");
+  b = new Ball(0, 100,"red", diameter); //make a new ball from the Ball class and call it b.
+  anotherBall = new Ball(200,20,"green", diameter);
 }
 
 
@@ -26,11 +26,12 @@ class Ball {
 		    this.x = x;
     		this.y = y;
         this.color= color;
+        diameter= random (10,1000)
 	}
 	drawBall(){  // draw a ball on the screen at x,y
     		stroke(0);
     		fill(this.color);
-		    ellipse(this.x,this.y,10,10);
+		    ellipse(this.x,this.y,diameter,10);
 	}
 	moveBall(){ //update the location of the ball, so it moves across the screen
 		this.x = this.x+1;
