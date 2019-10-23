@@ -8,6 +8,8 @@ function setup() {
   b = new Ball(0, 100,"red", 20); //make a new ball from the Ball class and call it b.
   anotherBall = new Ball(200,20,"green", 100);
   cloudy = new Ball (30,200,"purple",300)
+  shqaree = new  Square (20,30,"blue")
+  skware = new  Square (5,400,"red")
 }
 
 
@@ -19,6 +21,10 @@ function draw(){
     anotherBall.moveBall();
     cloudy.drawBall();
     cloudy.moveBall();
+    shqaree.drawSquare();
+    shqaree.moveSquare();
+    skware.drawSquare();
+    skware.moveSquare();
 
 }
 
@@ -38,6 +44,24 @@ class Ball {
 		    ellipse(this.x,this.y,this.diameter,10);
 	}
 	moveBall(){ //update the location of the ball, so it moves across the screen
+		this.x = this.x+1;
+		this.y = this.y+1;
+	}
+}
+
+class Square {
+
+	constructor(x,y,color){ //every ball needs an x value and a y value
+		    this.x = x;
+    		this.y = y;
+        this.color= color;
+	}
+	drawSquare(){  // draw a ball on the screen at x,y
+    		stroke(0);
+    		fill(this.color);
+		    square(this.x,this.y, 10);
+	}
+	moveSquare(){ //update the location of the ball, so it moves across the screen
 		this.x = this.x+1;
 		this.y = this.y+1;
 	}
