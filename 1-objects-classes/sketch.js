@@ -33,7 +33,7 @@ class Ball {
 		    ellipse(this.x,this.y,10,10);
 	}
 	moveBall(){ //update the location of the ball, so it moves across the screen
-		this.x = this.x+2;
-		this.y = this.y+.5;
+		this.x = this.x+1;
+		this.y = this.y+1;
 	}
 }
