@@ -9,7 +9,7 @@ function setup() {
   anotherBall = new Ball(200,20,"green", 100);
   cloudy = new Ball (30,200,"purple",300)
   shqaree = new  Square (20,30,"blue")
-  skware = new  Square (5,400,"red")
+  skware = new  Square (5,40,"red")
 }
 
 
@@ -59,7 +59,7 @@ class Square {
 	drawSquare(){  // draw a ball on the screen at x,y
     		stroke(0);
     		fill(this.color);
-		    square(this.x,this.y, 10);
+		    rect(this.x,this.y, 10,10);
 	}
 	moveSquare(){ //update the location of the ball, so it moves across the screen
 		this.x = this.x+1;
