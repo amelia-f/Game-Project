@@ -19,7 +19,7 @@ function draw(){
 }
 
 function keyPressed(){ //every time you push a key, make a new ball from the ball class and add it to the balls array
-  let  b = new Ball(100, 100);
+  let  b = new Ball(200, 200);
   balls.push(b);
   console.log(balls);
 }
