@@ -19,9 +19,13 @@ function draw(){
 
 
 	  }
-    for (let i = 0; i < squares.length; i++)
+
+      
+    for (let i = 0; i < squares.length; i++){
     squares[i].drawSquare();
     squares[i].moveSquare();
+
+  }
 }
 
 
