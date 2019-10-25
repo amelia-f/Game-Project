@@ -1,5 +1,5 @@
 //create an empty array called balls
-let balls = [];
+let squares = [];
 
 //create a variable to hold your avatar
 let me;
@@ -20,16 +20,16 @@ function draw(){
   me.moveMe();
 
   if (frameCount % 25 == 0) {
-      let  b = new Ball(width, random(0,height), -3);
-      balls.push(b);
-      console.log(balls); //print the balls array to the console
+      let  b = new Square(width, random(0,height), -3);
+      squares.push(b);
+      console.log(squares); //print the balls array to the console
     }
 
 //	draw all the balls in that array
-	for (let i = 0; i < balls.length; i++) {
-	 	      balls[i].drawBall();
-       	  balls[i].moveBall();
-        	balls[i].bounceBall();
+	for (let i = 0; i < squares.length; i++) {
+	 	      squares[i].drawSquare();
+       	  squares[i].moveSquare();
+          squares[i].bounceSquare();
 	  }
 
 }
@@ -63,10 +63,22 @@ class Avatar {
 
     if (keyIsDown(DOWN_ARROW)) { // if you hold the down arrow, move down by speed
         this.y += this.speed;
+
+      die(){
+        if (hitcount==30) {
+          print("Die")
+          died=true
+          textSize (60)
+          fill("blue")
+          noStroke();
+          text('You Died LOL':(20, 20);
+          fill (220)
+          rect (me.x-25, me.y-15, 90, 200)
+
+        }
+      }
     }
 	}
-
-  die(){
 
   }
 
@@ -74,7 +86,7 @@ class Avatar {
 
 
 //ball class from which to create new balls with similar properties.
-class Ball {
+class Square {
 
 	//every ball needs an x value, a y value, and a speed
 	constructor(x,y, speed){
@@ -84,23 +96,24 @@ class Ball {
 	}
 
 	// draw a ball on the screen at x,y
-	drawBall(){
+	drawSquare(){
     	stroke(0);
       strokeWeight(1);
-    	fill("red");
-		  ellipse(this.x,this.y,10,10);
+    	fill("blue");
+		  rect(this.x,this.y,20,20);
 	}
 
 	//update the location of the ball, so it moves across the screen
-	moveBall(){
+	moveSquare(){
 		this.x = this.x+ this.speed;
 		this.y = this.y+.5;
 	}
 
 	//if the ball hits the person, change the speed value to negative (send it in the opposite direction)
-  	bounceBall(){
+  	bounceSquare(){
     		if (this.x >= me.x-15 && this.x <= me.x+15 && this.y > me.y-40 && this.y < me.y+40){
       			this.speed = -this.speed;
+      hitcount=hitcount +1
     		}
   	}
 
