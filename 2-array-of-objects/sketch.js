@@ -2,6 +2,7 @@
 //create an empty array called balls
 
 let balls = [];
+let squares =[];
 
 function setup() {
   createCanvas(800, 400);
