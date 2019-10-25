@@ -26,7 +26,7 @@ function keyPressed(){ //every time you push a key, make a new ball from the bal
   balls.push(b);
   console.log(balls);
   squares.push(s);
-  console.log(squares)
+  console.log(squares);
 }
 
 //ball class from which to create new balls with similar properties.
