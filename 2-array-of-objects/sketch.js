@@ -15,10 +15,14 @@ function draw(){
 	for (let i = 0; i < balls.length; i++) {
 	    balls[i].drawBall();
       balls[i].moveBall();
-      squares[i].drawSquare();
-      squares[i].moveSquare();
+
+
 	  }
+    for (let i = 0; i < squares.length; i++)
+    squares[i].drawSquare();
+    squares[i].moveSquare();
 }
+
 
 function keyPressed(){ //every time you push a key, make a new ball from the ball class and add it to the balls array
   let  b = new Ball(200, 200);
