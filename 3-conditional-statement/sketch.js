@@ -10,7 +10,7 @@ let coloroptions = []
 
 function setup() {
   createCanvas(500, 400);
-  coloroptions = [color("green"), color("yellow"), color("red")]
+  coloroptions = [color(140, 0, 255), color(255, 238, 0), color(255, 102, 0), color(255, 0, 166), color(26, 255, 0)]
 
 
   //make one avatar called me
@@ -19,12 +19,12 @@ function setup() {
 }
 
 function draw(){
-	background(0, 10, 77);
+	background(0, 0, 0);
 
   me.drawMe();
   me.moveMe();
 
-  if (frameCount % 25 == 0) {
+  if (frameCount % 1/999 == 0) {
       let  b = new Square(width, random(0,height), -3);
       squares.push(b);
       console.log(squares); //print the balls array to the console
