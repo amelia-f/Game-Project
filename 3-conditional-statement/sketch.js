@@ -64,16 +64,7 @@ class Avatar {
     if (keyIsDown(DOWN_ARROW)) { // if you hold the down arrow, move down by speed
         this.y += this.speed;
 
-      die(){
-        if (hitcount==30) {
-          print("Die")
-          died=true
-          textSize (60)
-          fill("blue")
-          noStroke();
-          text('You Died LOL':(20, 20);
-          fill (220)
-          rect (me.x-25, me.y-15, 90, 200)
+  
 
         }
       }
