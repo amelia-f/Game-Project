@@ -4,9 +4,14 @@ let squares = [];
 //create a variable to hold your avatar
 let me;
 
+let coloroptions = []
+
+
 
 function setup() {
   createCanvas(500, 400);
+  coloroptions = [color("green"), color("yellow"), color("red")]
+
 
   //make one avatar called me
   me = new Avatar(width/2, 300, 3);
@@ -14,7 +19,7 @@ function setup() {
 }
 
 function draw(){
-	background(220);
+	background(0, 10, 77);
 
   me.drawMe();
   me.moveMe();
@@ -44,9 +49,9 @@ class Avatar {
 	}
 
 	drawMe(){  // draw the running person
-    		stroke("green");
+    		stroke(170,170,170);
         strokeWeight(3);
-    		fill("blue");
+    		fill("white");
 		    ellipse(this.x,this.y,20,20);
         line(this.x,this.y, this.x, this.y+40);
         line(this.x, this.y+40, this.x-20, this.y+60);
@@ -68,11 +73,11 @@ class Avatar {
         }
       }
     }
-	}
 
-  }
 
-}
+
+
+
 
 
 //ball class from which to create new balls with similar properties.
@@ -89,7 +94,7 @@ class Square {
 	drawSquare(){
     	stroke(0);
       strokeWeight(1);
-    	fill("blue");
+    	fill(coloroptions[int(random(0,coloroptions.length))]);
 		  rect(this.x,this.y,20,20);
 	}
 
@@ -103,7 +108,6 @@ class Square {
   	bounceSquare(){
     		if (this.x >= me.x-15 && this.x <= me.x+15 && this.y > me.y-40 && this.y < me.y+40){
       			this.speed = -this.speed;
-      hitcount=hitcount +1
     		}
   	}
 
