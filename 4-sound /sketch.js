@@ -12,7 +12,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(500, 400);
+  createCanvas(500, 600);
 
   //make one avatar called me
   me = new Avatar(width/2, 300, 3);
